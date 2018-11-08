@@ -42,8 +42,6 @@ public class lectureScanner {
         // if you use a next(), nextInt(), or nextDouble before a nextLine()
         // add an extra nextLine() before the first nextLine() you are using
 
-
-
     }
 
 }

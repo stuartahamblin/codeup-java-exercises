@@ -1,6 +1,6 @@
 import java.sql.SQLOutput;
 import java.util.Scanner;
-public class commandLineAdventureGame {
+public class CommandLineAdventureGame {
     public static void main(String[] args) {
 
 //        1. Create a command line adventure game...
