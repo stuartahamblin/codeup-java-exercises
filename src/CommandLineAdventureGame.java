@@ -54,6 +54,7 @@ public class CommandLineAdventureGame {
             System.out.println("Player One: Enter a word to be guessed");
             String hangmanAnswer = sc.nextLine();
             String hangmanBuild = "";
+            boolean allLetters;
             int guessesLeft = 6;
 
             for (int i = 0; i<hangmanAnswer.length(); i++) {
@@ -62,8 +63,11 @@ public class CommandLineAdventureGame {
                     while (continueGame) {
                         System.out.println("Guesses Left: " + guessesLeft);
                         System.out.println(hangmanBuild);
-                            System.out.println("Guess a letter");
-                            guessLetter = sc.nextLine();
+                        System.out.println("Guess a letter");
+                        guessLetter = sc.nextLine();
+                        if (guessLetter.length() != 1 || !guessLetter.chars().allMatch(Character::isLetter)) {
+                            continue;
+                        }
                         String renderGuess = "";
                         for (int j = 0; j < hangmanAnswer.length(); j++) {
                             if (hangmanAnswer.substring(j,j+1).toLowerCase().equals(guessLetter.toLowerCase())) {
