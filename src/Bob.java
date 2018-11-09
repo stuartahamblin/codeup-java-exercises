@@ -14,21 +14,21 @@ public class Bob {
 //        -He answers 'Whatever.' to anything else.
 //        Write the Java code necessary so that a user of your command line application can have a conversation with Bob.
 //                ANSWER
-                System.out.println("Talk with Bob");
-                String userInt = "something";
-                while (!userInt.equals("bye")){
-                    userInt = sc.nextLine();
-                    if (userInt.endsWith("?")) {
-                        System.out.println("Sure");
-                    } else if (userInt.endsWith("!")) {
-                        System.out.println("Whoa, chill out!");
-                    } else if (userInt.isEmpty()) {
-                        System.out.println("Fine. Be that way!");
-                    } else if (userInt.equals("bye")) {
-                        System.out.println("Bye!");
-                    } else {
-                        System.out.println("Whatever");
-                    }
-                }
+//                System.out.println("Talk with Bob");
+//                String userInt = "something";
+//                while (!userInt.equals("bye")){
+//                    userInt = sc.nextLine();
+//                    if (userInt.endsWith("?")) {
+//                        System.out.println("Sure");
+//                    } else if (userInt.endsWith("!")) {
+//                        System.out.println("Whoa, chill out!");
+//                    } else if (userInt.isEmpty()) {
+//                        System.out.println("Fine. Be that way!");
+//                    } else if (userInt.equals("bye")) {
+//                        System.out.println("Bye!");
+//                    } else {
+//                        System.out.println("Whatever");
+//                    }
+//                }
     }
 }
