@@ -39,25 +39,32 @@ public class BurgerTools {
     public String getMostPopularTopping() {
         return mostPopularTopping;
     }
+
     public static int getAverageDaysBeforeExpiration() {
         return averageDaysBeforeExpiration;
     }
+
     public int getTemperatureWhenCooked() {
         return temperatureWhenCooked;
     }
+
     public int getCurrentTempurature() {
         return currentTempurature;
     }
+
 // SETTER
     public void setMostPopularTopping(String mostPopularTopping) {
         this.mostPopularTopping = mostPopularTopping;
     }
+
     public static void setAverageDaysBeforeExpiration(int averageDaysBeforeExpiration) {
         BurgerTools.averageDaysBeforeExpiration = averageDaysBeforeExpiration;
     }
+
     public void setTemperatureWhenCooked(int temperatureWhenCooked) {
         this.temperatureWhenCooked = temperatureWhenCooked;
     }
+
     public void setCurrentTempurature(int currentTempurature) {
         this.currentTempurature = currentTempurature;
     }
