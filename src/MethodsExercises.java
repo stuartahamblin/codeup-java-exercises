@@ -28,21 +28,21 @@ public class MethodsExercises {
 //                  System.out.println(modNumbers(50,2));
 //              }
 //
-//              public static int addNumbers(int first, int second){
-//                  return first + second;
-//              }
-//              public static int subtractNumbers(int first, int second) {
-//                  return first - second;
-//              }
-//              public static int multiplyNumbers(int first, int second){
-//                  return first*second;
-//              }
-//              public static int divideNumbers(int first, int second){
-//                  return first/second;
-//              }
-//              public static int modNumbers(int first, int second){
-//                  return first % second;
-//              }
+              public static int addNumbers(int first, int second){
+                  return first + second;
+              }
+              public static int subtractNumbers(int first, int second) {
+                  return first - second;
+              }
+              public static int multiplyNumbers(int first, int second){
+                  return first*second;
+              }
+              public static int divideNumbers(int first, int second){
+                  return first/second;
+              }
+              public static int modNumbers(int first, int second){
+                  return first % second;
+              }
 
 //        QUESTION 2
 //          Create a method that validates that user input is in a certain range
@@ -58,16 +58,16 @@ public class MethodsExercises {
 //                  getInteger(1,10);
 //              }
 //
-//              public static int getInteger(int min, int max){
-//                  Scanner sc = new Scanner(System.in);
-//                  int between;
-//                  do{
-//                      System.out.println("Enter a value between " + min + " and " + max);
-//                      between = sc.nextInt();
-//                  } while (min >= between || max <= between);
-//                  System.out.println("Value is between " + min + " and " + max);
-//                  return between;
-//              }
+              public static int getInteger(int min, int max){
+                  Scanner sc = new Scanner(System.in);
+                  int between;
+                  do{
+                      System.out.println("Enter a value between " + min + " and " + max);
+                      between = sc.nextInt();
+                  } while (min >= between || max <= between);
+                  System.out.println("Value is between " + min + " and " + max);
+                  return between;
+              }
 
 //        QUESTION 3
 //          Calculate the factorial of a number.
@@ -94,32 +94,23 @@ public class MethodsExercises {
 //                  factorialNumber(1,10);
 //              }
 //
-//              public static int getInteger(int min, int max){
-//                  Scanner sc = new Scanner(System.in);
-//                  int between;
-//                  do{
-//                      System.out.println("Enter a value between " + min + " and " + max);
-//                      between = sc.nextInt();
-//                  } while (min >= between || max <= between);
-//                  System.out.println("Value is between " + min + " and " + max);
-//                  return between;
-//              }
-//              public static int factorialNumber(int min, int max){
-//                  Scanner sc = new Scanner(System.in);
-//                  String userContinue;
-//                  int factorialOf;
-//                  do {
-//                      factorialOf = getInteger(min, max);                                       //uncomment method above
-//                      System.out.println("Do you want to compute the factorial? \n [y/n]");
-//                      userContinue = sc.next();
-//                  } while (!userContinue.equals("y"));
-//                  int factorialValue = 1;
-//                  for (int i = 1; i <= factorialOf; i++){
-//                      factorialValue *= i;
-//                      System.out.println(factorialValue);
-//                  }
-//                  return factorialOf;
-//              }
+
+              public static int factorialNumber(int min, int max){
+                  Scanner sc = new Scanner(System.in);
+                  String userContinue;
+                  int factorialOf;
+                  do {
+                      factorialOf = getInteger(min, max);                                       //uncomment method above
+                      System.out.println("Do you want to compute the factorial? \n [y/n]");
+                      userContinue = sc.next();
+                  } while (!userContinue.equals("y"));
+                  int factorialValue = 1;
+                  for (int i = 1; i <= factorialOf; i++){
+                      factorialValue *= i;
+                      System.out.println(factorialValue);
+                  }
+                  return factorialOf;
+              }
 
 //        QUESTION 4
 //          Create an application that simulates dice rolling.
@@ -133,30 +124,30 @@ public class MethodsExercises {
 //                  diceRoll();
 //              }
 //
-//              public static int random(int maxNumber){
-//                  int randomValue = (int )(Math.random() * maxNumber + 1);
-//                  return randomValue;
-//              }
-//              public static int diceRoll(){
-//                  Scanner sc = new Scanner(System.in);
-//                  String userContinue;
-//                  int diceSides;
-//                  do {
-//                      System.out.println("Enter a number of sides on the dice to roll");
-//                      diceSides = sc.nextInt();
-//                      System.out.println("Do you want to roll both " + diceSides + " sided dice? \n [y/n]");
-//                      userContinue = sc.next().toLowerCase();
-//                  } while (!userContinue.equals("y"));
-//                  do {
-//                      int diceOne = random(diceSides);
-//                      int diceTwo = random(diceSides);
-//                      System.out.println("First roll = " + diceOne);
-//                      System.out.println("Second roll = " + diceTwo);
-//                      System.out.println("Do you want to roll both " + diceSides + " sided dice again? \n [y/n]");
-//                      userContinue = sc.next().toLowerCase();
-//                  } while (!userContinue.equals("n"));
-//                  return 0;
-//              }
+
+              public static int random(int maxNumber, int minNumber){
+                  return (int)(Math.random() * ((maxNumber-minNumber)+1) + minNumber);
+              }
+              public static int diceRoll(){
+                  Scanner sc = new Scanner(System.in);
+                  String userContinue;
+                  int diceSides;
+                  do {
+                      System.out.println("Enter a number of sides on the dice to roll");
+                      diceSides = sc.nextInt();
+                      System.out.println("Do you want to roll both " + diceSides + " sided dice? \n [y/n]");
+                      userContinue = sc.next().toLowerCase();
+                  } while (!userContinue.equals("y"));
+                  do {
+                      int diceOne = random(diceSides, 1);
+                      int diceTwo = random(diceSides, 1);
+                      System.out.println("First roll = " + diceOne);
+                      System.out.println("Second roll = " + diceTwo);
+                      System.out.println("Do you want to roll both " + diceSides + " sided dice again? \n [y/n]");
+                      userContinue = sc.next().toLowerCase();
+                  } while (!userContinue.equals("n"));
+                  return 0;
+              }
 
 //                  do {
 //                      System.out.println("Enter a number of sides on the dice to roll");
@@ -170,18 +161,18 @@ public class MethodsExercises {
 //    public static void main(String[]args){
 //        System.out.println(promptValueProceedLoop("Pick a number", "Proceed with value?"));
 //        }
-//                public static int promptValueProceedLoop(String promptStatement, String proceedStatement){
-//                      String userProceed = "n";
-//                      int proceedValue;
-//                      do {
-//                        Scanner sc = new Scanner(System.in);
-//                        System.out.println(promptStatement);
-//                        proceedValue = sc.nextInt();
-//                        System.out.println(proceedStatement + "\n[y/n]" );
-//                        userProceed = sc.next();
-//                      } while (!userProceed.equalsIgnoreCase("y"));
-//                      return proceedValue;
-//                  }
+                public static int promptValueProceedLoop(String promptStatement, String proceedStatement){
+                      String userProceed = "n";
+                      int proceedValue;
+                      do {
+                        Scanner sc = new Scanner(System.in);
+                        System.out.println(promptStatement);
+                        proceedValue = sc.nextInt();
+                        System.out.println(proceedStatement + "\n[y/n]" );
+                        userProceed = sc.next();
+                      } while (!userProceed.equalsIgnoreCase("y"));
+                      return proceedValue;
+                  }
 //                                   -   -   -
 //                                / \ / \ / \ / \
 //                                 -   -   -   -
@@ -208,66 +199,66 @@ public class MethodsExercises {
 //    countOs(),
 //    and countUs()
 //        ANSWER
-//        public static void main(String[] args) {
-//            countVowels("I always wanted to count all the vowels");
-//        }
-//        public static int countAs(String inputString){
-//            int count = 0;
-//            for(int i = 0; i < inputString.length(); i++) {
-//                String testLetter = inputString.substring(i,i+1);
-//                if (testLetter.equalsIgnoreCase("a")){
-//                    count += 1;
-//                }
-//            }
-//            return count;
-//        }
-//        public static int countEs(String inputString){
-//            int count = 0;
-//            for(int i = 0; i < inputString.length(); i++) {
-//                String testLetter = inputString.substring(i,i+1);
-//                if (testLetter.equalsIgnoreCase("e")){
-//                    count += 1;
-//                }
-//            }
-//            return count;
-//        }
-//        public static int countIs(String inputString){
-//            int count = 0;
-//            for(int i = 0; i < inputString.length(); i++) {
-//                String testLetter = inputString.substring(i,i+1);
-//                if (testLetter.equalsIgnoreCase("i")){
-//                    count += 1;
-//                }
-//            }
-//            return count;
-//        }
-//        public static int countOs(String inputString){
-//            int count = 0;
-//            for(int i = 0; i < inputString.length(); i++) {
-//                String testLetter = inputString.substring(i,i+1);
-//                if (testLetter.equalsIgnoreCase("o")){
-//                    count += 1;
-//                }
-//            }
-//            return count;
-//        }
-//        public static int countUs(String inputString){
-//            int count = 0;
-//            for(int i = 0; i < inputString.length(); i++) {
-//                String testLetter = inputString.substring(i,i+1);
-//                if (testLetter.equalsIgnoreCase("u")){
-//                    count += 1;
-//                }
-//            }
-//            return count;
-//        }
-//        public static int countVowels(String inputString){
-//            System.out.println("|======== VOWEL COUNT ========|");
-//            System.out.println("| A's | E's | I's | O's | U's |");
-//            System.out.println("| "+countAs(inputString)+"   | " + countEs(inputString)+"   | " + countIs(inputString)+"   | "+countOs(inputString)+"   | "+countUs(inputString)+"   |");
-//            System.out.println("|=============================|");
-//            return countAs(inputString)+countEs(inputString)+countIs(inputString)+countOs(inputString)+countUs(inputString);
-//        }
+        public static void main(String[] args) {
+            countVowels("I always wanted to count all the vowels");
+        }
+        public static int countAs(String inputString){
+            int count = 0;
+            for(int i = 0; i < inputString.length(); i++) {
+                String testLetter = inputString.substring(i,i+1);
+                if (testLetter.equalsIgnoreCase("a")){
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        public static int countEs(String inputString){
+            int count = 0;
+            for(int i = 0; i < inputString.length(); i++) {
+                String testLetter = inputString.substring(i,i+1);
+                if (testLetter.equalsIgnoreCase("e")){
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        public static int countIs(String inputString){
+            int count = 0;
+            for(int i = 0; i < inputString.length(); i++) {
+                String testLetter = inputString.substring(i,i+1);
+                if (testLetter.equalsIgnoreCase("i")){
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        public static int countOs(String inputString){
+            int count = 0;
+            for(int i = 0; i < inputString.length(); i++) {
+                String testLetter = inputString.substring(i,i+1);
+                if (testLetter.equalsIgnoreCase("o")){
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        public static int countUs(String inputString){
+            int count = 0;
+            for(int i = 0; i < inputString.length(); i++) {
+                String testLetter = inputString.substring(i,i+1);
+                if (testLetter.equalsIgnoreCase("u")){
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        public static int countVowels(String inputString){
+            System.out.println("|======== VOWEL COUNT ========|");
+            System.out.println("| A's | E's | I's | O's | U's |");
+            System.out.println("| "+countAs(inputString)+"   | " + countEs(inputString)+"   | " + countIs(inputString)+"   | "+countOs(inputString)+"   | "+countUs(inputString)+"   |");
+            System.out.println("|=============================|");
+            return countAs(inputString)+countEs(inputString)+countIs(inputString)+countOs(inputString)+countUs(inputString);
+        }
 
 //------ 2 ------
 //    Create a method that will return how many capital letters are in a string.
@@ -275,16 +266,16 @@ public class MethodsExercises {
 //        public static void main(String[] args) {
 //            System.out.println(countCapitalLetters("I alWays"));
 //        }
-//        public static int countCapitalLetters(String inputString){
-//            int count = 0;
-//            for(int i = 0; i < inputString.length(); i++) {
-//                String testLetter = inputString.substring(i,i+1);
-//                if (!testLetter.toLowerCase().equals(testLetter)){
-//                    count += 1;
-//                }
-//            }
-//            return count;
-//        }
+        public static int countCapitalLetters(String inputString){
+            int count = 0;
+            for(int i = 0; i < inputString.length(); i++) {
+                String testLetter = inputString.substring(i,i+1);
+                if (!testLetter.toLowerCase().equals(testLetter)){
+                    count += 1;
+                }
+            }
+            return count;
+        }
 
 //------ 3 ------
 //    Create a method, getType() that will take in an input and return a string describing the type of the value.
@@ -297,21 +288,21 @@ public class MethodsExercises {
 //            System.out.println(getType(5.5));
 //            System.out.println(getType(true));
 //        }
-//        public static String getType(int input){
-//            return "int";
-//        }
-//        public static String getType(boolean input){
-//            return "boolean";
-//        }
-//        public static String getType(String input){
-//            return "String";
-//        }
-//        public static String getType(char input){
-//            return "char";
-//        }
-//        public static String getType(double input){
-//            return "double";
-//        }
+        public static String getType(int input){
+            return "int";
+        }
+        public static String getType(boolean input){
+            return "boolean";
+        }
+        public static String getType(String input){
+            return "String";
+        }
+        public static String getType(char input){
+            return "char";
+        }
+        public static String getType(double input){
+            return "double";
+        }
 
 //------ 4 ------
 //    Create a method to print out every letter in a string using recursion.
