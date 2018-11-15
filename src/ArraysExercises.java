@@ -6,7 +6,7 @@ public class ArraysExercises {
 //
 //    Create a class inside of src named ArraysExercises. Create a main method for this class to do your work
 //
-//    What happens when you run the following code? Why is Arrays.toString necessary?
+//    What happens when you run the following code? Why is Arrays.toString necessary? //you would get the array id. toString allows us to look at the array contents
 //    int[] numbers = {1, 2, 3, 4, 5};
 //    System.out.println(numbers);
 //
@@ -23,22 +23,22 @@ public static Person[] addPerson(Person[] personArray, Person newPerson){
     return morePeople;
 }
 
-//    public static void main(String[] args) {
-//        int[] numbers = {1, 2, 3, 4, 5};
-//        System.out.println(numbers);
-//        Person[] people = new Person[3];
-//        people[0] = new Person("Juan");
-//        people[1] = new Person("Kyla");
-//        people[2] = new Person("Benny");
-//        Person addedPerson = new Person("Steven");
-//        for (int i = 0; i<people.length; i++){
-//            System.out.println(people[i].getName());
-//        }
-//        Person[] evenMorePeople = addPerson(people, addedPerson);
-//        for (int i = 0; i < evenMorePeople.length; i++){
-//            System.out.println(evenMorePeople[i].getName());
-//        }
-//    }
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        System.out.println(numbers);
+        Person[] people = new Person[3];
+        people[0] = new Person("Juan");
+        people[1] = new Person("Kyla");
+        people[2] = new Person("Benny");
+        Person addedPerson = new Person("Steven");
+        for (int i = 0; i<people.length; i++){
+            System.out.println(people[i].getName());
+        }
+        Person[] evenMorePeople = addPerson(people, addedPerson);
+        for (int i = 0; i < evenMorePeople.length; i++){
+            System.out.println(evenMorePeople[i].getName());
+        }
+    }
 
 // 2. Server Name Generator
 //
