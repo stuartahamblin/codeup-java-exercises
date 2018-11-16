@@ -1,6 +1,6 @@
 package shapes;
 
-public class Rectangle {
+public class Rectangle extends Quadrilateral implements Measurable{
 //    Shapes
 //
 //    Inside of your shapes directory, create a class named Rectangle. It should have protected properties for both
@@ -32,15 +32,19 @@ public class Rectangle {
     protected double length;
     protected double width;
     public Rectangle(double length, double width) {
-        this.length = length;
-        this.width = width;
+        super(length,width);
     }
+    public double getLength() {
+        return length;
+    }
+    public double getWidth() {
+        return width;
+    }
+
     public double getArea(){
-        System.out.println("square");
         return this.length * this.width;
     }
     public double getPerimeter(){
-        System.out.println("square");
         return 2*this.length + 2*this.width;
     }
 
@@ -48,5 +52,13 @@ public class Rectangle {
         Rectangle pointy = new Rectangle(5,3);
         System.out.println(pointy.getArea());
         System.out.println(pointy.getPerimeter());
+    }
+
+    public void setLength(double length) {
+        super.length = length;
+    }
+
+    public void setWidth(double width) {
+        super.width = width;
     }
 }
