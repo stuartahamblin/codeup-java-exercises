@@ -19,15 +19,26 @@ public class ShapesTest {
 
 
     public static void main(String[] args) {
-        Rectangle box1 = new Rectangle(5,4);
-        System.out.println(box1.getPerimeter());
-        System.out.println(box1.getArea());
-        Rectangle box2 = new Square(5);
-        System.out.println(box2.getPerimeter());
-        System.out.println(box2.getArea());
+//        Rectangle box1 = new Rectangle(5,4);
+//        System.out.println(box1.getPerimeter());
+//        System.out.println(box1.getArea());
+//        Shape box2 = new Square(5);
+//        System.out.println(box2.getPerimeter());
+//        System.out.println(box2.getArea());
 //        Square angles = new Square(5);
 //        System.out.println(angles.length);
 //        System.out.println(angles.width);
 //        System.out.println(angles.side);
+        Measurable myShape = new Square(5);
+        System.out.println(((Square) myShape).getLength());
+        System.out.println(((Square) myShape).getWidth());
+        System.out.println(myShape.getPerimeter());
+        System.out.println(myShape.getArea());
+        System.out.println("Rectangle Example");
+        Measurable myForm = new Rectangle(5,6);
+        System.out.println(((Rectangle) myForm).getLength());
+        System.out.println(((Rectangle) myForm).getWidth());
+        System.out.println(myForm.getPerimeter());
+        System.out.println(myForm.getArea());
     }
 }

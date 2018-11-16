@@ -1,6 +1,6 @@
 package shapes;
 
-public class Square extends Rectangle {
+public class Square extends Quadrilateral {
 //    Create a class named Square, also inside of shapes, that extends Rectangle. Square should define a constructor
 //    that accepts one argument, side, and calls the parent's constructor to set both the length and width to the
 //    value of side.
@@ -19,16 +19,27 @@ public class Square extends Rectangle {
 //    area = side ^ 2
 //    Re-run your ShapesTest class. How can you determine which getArea and getPerimeter methods are being called on each object?
     public double side;
-    public double getArea(){
-        System.out.println("rectangle");
-        return Math.pow(this.length, 2);
-    }
-    public double getPerimeter(){
-        System.out.println("rectangle");
-        return 4 * length;
-    }
-
     public Square(double side) {
         super(side, side);
     }
+    public double getLength() {
+        return super.getLength();
+    }
+    public void setLength(double side) {
+        super.length = side;
+        super.width = side;
+    }
+    public void setWidth(double side) {
+        super.width = side;
+        super.length = side;
+    }
+
+    public double getArea(){
+        return Math.pow(this.length, 2);
+    }
+    public double getPerimeter(){
+        return 4 * length;
+    }
+
+
 }
