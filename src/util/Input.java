@@ -35,19 +35,20 @@ public class Input {
     }
 
     public int getInt(){
-        if(!scanner.hasNextInt()){
+        int userInput;
+        try {
+            userInput = Integer.valueOf(scanner.nextLine());
+        } catch(NumberFormatException e){
             System.out.println("not an integer. Please try again.");
-            scanner.nextLine();
             return getInt();
-        } else {
-            return scanner.nextInt();
         }
+        return userInput;
     }
     public int getInt(int min, int max){
         int userInput;
         do{
             System.out.println("Please enter a value between " + min + " and " + max);
-            userInput = this.scanner.nextInt();
+            userInput = getInt();
         } while (min >= userInput || max <= userInput);
         return userInput;
     }
@@ -57,12 +58,19 @@ public class Input {
         double userInput;
         do{
             System.out.println("Please enter a value between " + min + " and " + max);
-            userInput = this.scanner.nextDouble();
+            userInput = getDouble();
         } while (min >= userInput || max <= userInput);
         return userInput;
     }
     public double getDouble(){
-        return this.scanner.nextDouble();
+        double userInput;
+        try {
+            userInput = Double.valueOf(scanner.nextLine());
+        } catch(NumberFormatException e){
+            System.out.println("not an integer. Please try again.");
+            return getInt();
+        }
+        return userInput;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
