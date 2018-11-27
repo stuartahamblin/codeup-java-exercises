@@ -10,9 +10,7 @@ public class GradesApplication {
     public void commandLineInterface(HashMap<String, Student> sampleHashMap) {
         System.out.println("Welcome! \nHere are the github usernames of our students:");
 
-
     }
-
 
 public static void main(String[] args) {
     Student Newt = new Student("Newt Scamander");
