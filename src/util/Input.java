@@ -34,6 +34,7 @@ public class Input {
         return (input.equalsIgnoreCase("y")||input.equalsIgnoreCase("yes"));
     }
 
+
     public int getInt(){
         int userInput;
         try {
