@@ -25,19 +25,31 @@ public class FileIO {
     }
 
     public static void main(String[] args) {
-        ArrayList<String> writingFile = new ArrayList<>();
-        writingFile.add("Banana");
-        writingFile.add("Mango");
-        writingFile.add("Grape Fruit");
-
-        System.out.println(writingFile);
-        Path p = Paths.get(".","newFile.txt");
+//        ArrayList<String> writingFile = new ArrayList<>();
+//        writingFile.add("Banana");
+//        writingFile.add("Mango");
+//        writingFile.add("Grape Fruit");
+//
+//        System.out.println(writingFile);
+//        Path p = Paths.get(".","newFile.txt");
+//        try {
+//            Files.write(p,writingFile, StandardOpenOption.APPEND);
+//            System.out.println(Files.readAllLines(p));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        retrieveFileContents(p);
+        String[] names = {"Rick", "Stacey", "Brad", "Becca"};
+        String x;
         try {
-            Files.write(p,writingFile, StandardOpenOption.APPEND);
-            System.out.println(Files.readAllLines(p));
-        } catch (IOException e) {
+            x = names[100];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Exception caught!");
+            x = "";
+        } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            System.out.println("This will always run.");
         }
-        retrieveFileContents(p);
     }
 }
