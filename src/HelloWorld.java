@@ -1,6 +1,6 @@
 public class HelloWorld {
     public static void main(String[] args) {
-//        System.out.println("Hello, World!");
+        System.out.println("Hello, World!");
 //        int myFavoriteNumber = 12;
 //        System.out.println(myFavoriteNumber);
 //        double myString = 3.14159;
