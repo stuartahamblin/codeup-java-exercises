@@ -13,8 +13,8 @@ public class ConsoleExercises {
 //        Don't change the value of the variable, instead, reference one of the links above and use System.out.format to accomplish this.
 //
 //              ANSWER S1Q1:
-//              double pi = 3.14159;
-//              System.out.printf("The value of pi is approximately %.2f", pi);
+              double pi = 3.14159;
+              System.out.printf("The value of pi is approximately %.2f", pi);
 //
 //              ALT ANSWER
 //              double pi = 3.14159;
